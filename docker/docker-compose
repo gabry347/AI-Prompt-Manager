@@ -1,0 +1,4 @@
+#servizzi necesari 
+# 2 db uno per testing l'altro per dev
+# 1 per runnare il frontend e 1 il backend 
+# 1 redis per cache
