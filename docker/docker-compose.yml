@@ -1,0 +1,20 @@
+#servizzi necesari
+# 2 db uno per testing l'altro per dev
+# 1 per runnare il frontend e 1 il backend
+# 1 redis per cache
+services:
+  postgres:
+    image: postgres:latest
+    container_name: db_test
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: Paseword1
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+
